@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Outfit"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #0d192c;
+        font-family: "Outfit";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        background-color: #15263f;
+        padding: 24px;
+        width: 350px;
+        border-radius: 20px;
+      }
+      #image {
+        position: relative;
+        width: 350px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      #transparent {
+        width: 350px;
+        border-radius: 20px;
+        height: 350px;
+        margin: 32px;
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: calc(50% - 207px);
+        z-index: 99;
+        padding: 0;
+        background-color: #00fff8;
+        opacity: 0.5;
+      }
+      #abs {
+        position: absolute;
+        z-index: 100;
+        left: calc(50% - 22px);
+        top: 180px;
+        display: none;
+      }
+      h1:hover {
+        color: #00fff8;
+      }
+      span:hover {
+        color: #00fff8;
+      }
+      #image:hover ~ #transparent {
+        display: inline;
+      }
+      #image:hover ~ #abs {
+        display: inline;
+      }
+      h1 {
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        width: 302px;
+        height: 28px;
+        cursor: pointer;
+      }
+      p {
+        font-size: 18px;
+        color: #8bacd9;
+        width: 302px;
+        height: 52px;
+      }
+      b {
+        color: #00fff8;
+        font-size: 16px;
+      }
+      strong {
+        color: #8bacd9;
+        font-size: 16px;
+      }
+      span {
+        color: white;
+      }
+      .inline {
+        display: inline-block;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px;
+      }
+      #child1 {
+        width: 92.49px;
+      }
+      #child2 {
+        width: 96px;
+      }
+
+      .icon {
+        height: 20px;
+      }
+      #parent {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+      }
+      #author {
+        border-top: 1px solid #2e405a;
+        margin-top: 24px;
+        margin-bottom: 0px;
+        padding: 0px;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+      }
+      #avatar {
+        width: 33px;
+        height: 33px;
+        margin-right: 16px;
+      }
+      #name {
+        display: inline-block;
+        height: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!--<div class="change" id="transparent"></div>-->
+      <img src="./image-equilibrium.jpg" id="image" />
+      <h1>Equilibrium #3429</h1>
+      <!--<div class="change" id="transparent"></div>-->
+      <img src="./icon-view.svg" id="abs" class="change" />
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="change" id="transparent"></div>
+      <div id="parent">
+        <div class="inline" id="child1">
+          <img src="./icon-ethereum.svg" class="icon" />
+          <b>0.041 ETH </b>
+        </div>
+        <div class="inline" id="child2">
+          <img src="./icon-clock.svg" class="icon" />
+          <strong> 3 days left </strong>
+        </div>
+      </div>
+      <div id="author">
+        <img src="image-avatar.png" id="avatar" />
+        <p id="name">Creation of <span class="span">Jules Wyvern</span></p>
+      </div>
+    </div>
+  </body>
+</html>
